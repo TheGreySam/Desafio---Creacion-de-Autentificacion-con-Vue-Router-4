@@ -14,6 +14,7 @@ import { Message } from "element-ui"
 
 Firebase.initializeApp(firebaseConfig);
 
+
 Vue.config.productionTip = false
 Vue.use(Element)
 

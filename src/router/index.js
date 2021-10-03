@@ -9,15 +9,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "*",
-    redirect: "/home"
-  },
-  {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home,
     meta: {
-      login: true,
+      login: false,
     }
   },
   {
@@ -31,7 +27,10 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      login: false
+    }
   }
 ]
 
@@ -41,7 +40,19 @@ const router = new VueRouter({
   routes
 })
 
-//router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
+  if(to.meta.login) {
+    if (Store.state.currentUser) {
+    next();
+  } else {
+    next("/login")
+  }
+} else {
+  next();
+}
+
+});
+
 //  let user = Firebase.auth().currentUser;
 //  let authRequired = to.matched.some(rpute => router.meta.login);
 //  if (!user && authRequired) {
@@ -53,4 +64,4 @@ const router = new VueRouter({
 //  }
 //})
 
-export default router
+export default router;

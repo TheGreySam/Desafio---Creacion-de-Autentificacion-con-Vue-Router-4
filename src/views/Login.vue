@@ -93,11 +93,16 @@ export default {
             Firebase.auth().signInWithEmailAndPassword(this.email, this.password)
             .then(response => {
                 console.log(response.user.email);
+                this.$store.dispatch('defineCurrentUser', {
+                    email: response.user.email,
+                });
                 this.$router.push("/")
                 alert("Login exitoso")
             })
             .catch(error => {
                 console.error(error)
+                this.$router.push("/about")
+                alert("El usuario y/o contraseña no coinciden")
             })
             //console.log(this.email, this.password);
         }
