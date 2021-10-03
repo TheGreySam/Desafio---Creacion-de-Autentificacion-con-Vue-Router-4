@@ -1,89 +1,114 @@
-<section class="vh-100">
-  <div class="container-fluid h-custom">
+<template>
+  <div class="home">
+
+
+<div class="card text-black">
+  <!--img class="card-img" src="" alt="Card image"  style="height: 650pt; object-fit: cover;"/-->
+  <div class="card-img-overlay ">
+	  <section class="h-500 gradient-form" >
+  <div class="container py-5 h-100 ">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid"
-          alt="Sample image">
-      </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form>
-          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
+      <div class="col-xl-10">
+        <div class="card navpizza rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body  p-md-5 mx-md-4">
 
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
+                <div class="text-center">
+                                  
+                </div>
 
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-linkedin-in"></i>
-            </button>
-          </div>
+                <form>
+                  <p>Porfavor ingresa a tu cuenta</p>
 
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
+                  <div class="form-outline mb-4">
+                      <label class="form-label">Usuario</label>
+                    <input type="email" id="correo" class="form-control" placeholder="Escribe aquí tu correo"/>
+                    
+                  </div>
 
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label class="form-label" for="form3Example3">Email address</label>
-          </div>
+                  <div class="form-outline mb-4">
+                      <label class="form-label">Contraseña</label>
+                    <input type="password" id="contraseña" class="form-control" placeholder="Escribe aquí tu contraseña"/>
+                    
+                  </div>
 
-          <!-- Password input -->
-          <div class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Password</label>
-          </div>
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3" type="button">Ingresa</button>
+                    <a class="text-muted" href="#!"> Olvidaste tu contraseña?</a>
+                  </div>
 
-          <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">No tienes una cuenta?</p>
+                    <button type="button" class="btn btn-outline-success">Regístrate</button>
+                  </div>
+
+                </form>
+
+              </div>
             </div>
-            <a href="#!" class="text-body">Forgot password?</a>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-black px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">Database</h4>
+				<img alt="Vue logo" src="../assets/logo.png">  
+              </div>
+            </div>
           </div>
-
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                class="link-danger">Register</a></p>
-          </div>
-
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-    <!-- Copyright -->
-    <div class="text-white mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
-    </div>
-    <!-- Copyright -->
-
-    <!-- Right -->
-    <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-    
   </div>
 </section>
+
+  </div>
+</div>
+</div>  
+</template>
+
+<script>
+
+</script>
+
+<style scoped>
+.card-img-home {
+  width: 100%;
+  
+  object-fit: cover;
+  opacity: 30%;
+}
+
+@media screen and (max-width: 299px) {
+    
+    .card-img-home {
+  width: 0px;
+  
+  
+  object-fit: cover;
+  opacity: 30%;
+}
+}
+
+@media screen and (min-width: 300px) and (max-width: 899px) {
+    
+    .card-img-home {
+  width: 100%;
+  max-height: 55vw;
+  
+  object-fit: cover;
+  opacity: 30%;
+}
+}
+
+@media screen and (min-width: 900px) {
+    .fas {
+        font-size: 8em;
+    }
+    .card-img-home {
+  width: 100%;
+  max-height: 20vw;
+  
+  object-fit: cover;
+  opacity: 30%;
+}
+}
+</style>
